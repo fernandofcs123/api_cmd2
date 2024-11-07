@@ -1,7 +1,5 @@
 const express = require('express')
 const router = express.Router()
-const UsersController = require('../controllers/usersController')
-const authToken = require('../middlewares/althToken')
 const principalController = require('../controllers/principalController')
 const loginController = require('../controllers/loginController')
 const doacoesController = require('../controllers/doacoesController')
