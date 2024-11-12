@@ -4,8 +4,9 @@ const principalController = require('../controllers/principalController')
 const loginController = require('../controllers/loginController')
 const doacoesController = require('../controllers/doacoesController')
 const compraController = require('../controllers/compraController')
+const authtoken = require("../middlewares/althToken")
 
-router.post('/novodoador',principalController.novo_doador)                  //ok
+router.post('/novodoador',authtoken,principalController.novo_doador)                  //ok
 router.post('/doacao',doacoesController.nova_doacao)                        //ok
 router.post('/compra',compraController.nova_compra)                         //ok
 router.post('/novodiversos',doacoesController.doacao_diversos)              //ok
